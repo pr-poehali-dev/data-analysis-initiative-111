@@ -31,16 +31,16 @@ export default function Hero({ onOpenModal }: HeroProps) {
 
       <div className="relative z-10 text-center text-white">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-          КРЫМ И РОССИЯ
+          РОССИЯ<br />С ЛЮБОВЬЮ
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
-          Авторские туры по самым живописным уголкам — от крымских скал до просторов Сибири
+          Путешествия, которые остаются в памяти навсегда — по Крыму, Байкалу, Алтаю и не только
         </p>
         <button
           onClick={onOpenModal}
           className="inline-block mt-8 bg-white text-black px-8 py-3 uppercase text-sm tracking-widest font-semibold hover:bg-transparent hover:text-white border border-white transition-all duration-300 cursor-pointer"
         >
-          Оставить заявку
+          Подобрать тур
         </button>
       </div>
     </div>

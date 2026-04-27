@@ -30,12 +30,12 @@ export default function Promo({ onOpenModal }: PromoProps) {
       </div>
 
       <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Незабываемые маршруты
+        Куда зовёт душа
       </h3>
 
       <div className="absolute bottom-12 right-6 z-10 text-right">
         <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-3xl mb-6">
-          Горные тропы Крыма, бескрайний Байкал, дикая Карелия — выбери своё приключение
+          Крымские скалы над морем, рассвет на Байкале, тишина алтайских гор — каждый маршрут создан для тех, кто хочет почувствовать Россию по-настоящему
         </p>
         <button
           onClick={onOpenModal}
