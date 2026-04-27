@@ -1,7 +1,11 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
-export default function Promo() {
+interface PromoProps {
+  onOpenModal: () => void;
+}
+
+export default function Promo({ onOpenModal }: PromoProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -18,21 +22,28 @@ export default function Promo() {
       <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
         <motion.div style={{ y }} className="relative w-full h-full">
           <img
-            src="/images/spiral-circles.jpg"
-            alt="Abstract spiral circles"
+            src="https://cdn.poehali.dev/projects/c9b64e62-c223-4269-a424-7cf5b104dd1c/files/cadf6b3c-cd7a-4d44-9aae-cb8817a6eb3c.jpg"
+            alt="Крымский горный маршрут"
             className="w-full h-full object-cover"
           />
         </motion.div>
       </div>
 
       <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Анатомия возможностей
+        Незабываемые маршруты
       </h3>
 
-      <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Каждая секция — рамка для твоей истории. Формируй её, миксуй и позволь контенту
-        литься в неожиданные паттерны, заставляя листать дальше.
-      </p>
+      <div className="absolute bottom-12 right-6 z-10 text-right">
+        <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-3xl mb-6">
+          Горные тропы Крыма, бескрайний Байкал, дикая Карелия — выбери своё приключение
+        </p>
+        <button
+          onClick={onOpenModal}
+          className="inline-block bg-white text-black px-8 py-3 uppercase text-sm tracking-widest font-semibold hover:bg-transparent hover:text-white border border-white transition-all duration-300 cursor-pointer"
+        >
+          Оставить заявку
+        </button>
+      </div>
     </div>
   );
 }

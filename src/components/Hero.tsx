@@ -1,7 +1,11 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  onOpenModal: () => void;
+}
+
+export default function Hero({ onOpenModal }: HeroProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -32,12 +36,12 @@ export default function Hero() {
         <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
           Авторские туры по самым живописным уголкам — от крымских скал до просторов Сибири
         </p>
-        <a
-          href="#tours"
-          className="inline-block mt-8 bg-white text-black px-8 py-3 uppercase text-sm tracking-widest font-semibold hover:bg-transparent hover:text-white border border-white transition-all duration-300"
+        <button
+          onClick={onOpenModal}
+          className="inline-block mt-8 bg-white text-black px-8 py-3 uppercase text-sm tracking-widest font-semibold hover:bg-transparent hover:text-white border border-white transition-all duration-300 cursor-pointer"
         >
-          Выбрать тур
-        </a>
+          Оставить заявку
+        </button>
       </div>
     </div>
   );
