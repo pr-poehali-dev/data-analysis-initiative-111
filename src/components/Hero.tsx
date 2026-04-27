@@ -19,19 +19,25 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="/images/mountain-landscape.jpg"
-          alt="Mountain landscape"
+          src="https://cdn.poehali.dev/projects/c9b64e62-c223-4269-a424-7cf5b104dd1c/files/61429102-6036-4e60-9e7a-add2733033ac.jpg"
+          alt="Крым — скалы и море"
           className="w-full h-full object-cover"
         />
       </motion.div>
 
       <div className="relative z-10 text-center text-white">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-          ОТКРОЙ
+          КРЫМ И РОССИЯ
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
-          Исследуй границы дизайна с иммерсивным параллакс-эффектом
+          Авторские туры по самым живописным уголкам — от крымских скал до просторов Сибири
         </p>
+        <a
+          href="#tours"
+          className="inline-block mt-8 bg-white text-black px-8 py-3 uppercase text-sm tracking-widest font-semibold hover:bg-transparent hover:text-white border border-white transition-all duration-300"
+        >
+          Выбрать тур
+        </a>
       </div>
     </div>
   );
